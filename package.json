@@ -1,0 +1,25 @@
+{
+  "name": "atbackend",
+  "version": "1.0.0",
+  "description": "find lunch"
+  },
+  "engines": {
+    "node": "6.3.1"
+  },
+  "scripts": {
+    "build": "cd atfrontend && npm install & npm run build && cd ..",
+    "deploy": "cp -a atfrontend/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built'"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electricjug/atbackend.git"
+  },
+  "author": "valeria graffeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electricjug/atbackend/issues"
+  },
+  "homepage": "https://github.com/electricjug/atbackend#readme"
+}
