@@ -1,0 +1,3 @@
+[submodule "atfrontend"]
+	path = atfrontend
+	url = https://github.com/electricjug/atfrontend
