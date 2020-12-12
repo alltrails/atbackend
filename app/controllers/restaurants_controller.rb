@@ -1,9 +1,15 @@
 class RestaurantsController < ApplicationController
     def index
-      render json: { restaurants: Restaurant.new.list }
+      if restaurant_params.blank?
+        render json: { restaurants: [] }
+      else
+        render json: { restaurants: Restaurant.new(restaurant_params[:search_text]).list }
+      end
     end
 
-    def show
-      render json: { show: :showww }
+    private
+
+    def restaurant_params
+      params.permit(:search_text)
     end
 end
