@@ -5,6 +5,6 @@ class Restaurant
   end
 
   def list
-    @client.spots_by_query(@search_text)
+    @client.spots_by_query(@search_text).take(10)
   end
 end
